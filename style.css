@@ -11,7 +11,7 @@ nav {
     background: #020617;
     color: white;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;   /* logo top, menu below */
     align-items: center;
     padding: 15px 20px;
     position: sticky;
@@ -20,18 +20,19 @@ nav {
 }
 
 nav h2 {
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
-/* MENU */
+/* MENU ROW */
 nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;   /* ALWAYS ROW */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
 
 nav a {
@@ -129,6 +130,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .skills span {
@@ -197,14 +199,10 @@ footer {
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-    nav {
-        padding: 12px;
-    }
-
     nav ul {
-        justify-content: center;
-        gap: 12px;
-        font-size: 14px;
+        flex-direction: row;      /* FORCE ROW */
+        flex-wrap: nowrap;        /* PREVENT COLUMN */
+        gap: 15px;
     }
 
     .home {
@@ -235,9 +233,5 @@ footer {
     section {
         margin: 10px;
         padding: 25px;
-    }
-
-    .skills {
-        justify-content: center;
     }
 }
