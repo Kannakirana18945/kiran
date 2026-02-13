@@ -204,3 +204,49 @@ footer {
 .secondary-btn:hover {
     background: #22c55e;
 }
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .home {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+        font-size: 14px;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
